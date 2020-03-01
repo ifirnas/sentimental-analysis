@@ -1,0 +1,64 @@
+.smiley {
+    position: fixed;
+    left: 20px;
+    bottom: 20px;
+    border-radius: 50px;
+    background: #231b1a;
+    padding: 8px;
+    cursor: pointer;   
+    width: 50px;
+    height: 50px; 
+    transition: width 0.4s ease-in-out;
+    z-index: 2;
+
+    &:hover {
+        width: 250px;
+        transition: 0.4s all;
+
+        .smiley-icon {
+            opacity: 0;
+            height: 0;
+            transition: 0.4s all;
+        }
+
+        .smiley-text {
+            opacity: 1;
+            text-align: center;
+            left: 0;
+            transition: 1.3s all;
+        }
+    }
+
+    &-text {
+        line-height: 45px;        
+        opacity: 0;
+        height: 0;
+        position: relative;
+        left: -40px;
+        font-weight: 700;
+    }
+
+    &-icon {
+        font-size: 50px;
+        transition: 0.4s all ease-in-out;
+        color: #ffd75d;        
+        line-height: 1px;
+    }
+}
+
+
+@keyframes fadeInRight {
+    0% {
+       opacity: 0;
+       transform: translateX(20px);
+    }
+    100% {
+       opacity: 1;
+       transform: translateX(0);
+    }
+ }
+
+ .fadeInRight {
+    -webkit-animation-name: fadeInRight;
+    animation-name: fadeInRight;
+ }

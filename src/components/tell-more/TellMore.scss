@@ -1,0 +1,14 @@
+.custom-input {
+    width: 300px;
+}
+
+.initClass {
+    opacity: 0;
+    height: auto;
+    max-height: 200px;    
+    position: fixed;
+    left: 20px;
+    bottom: 20px;
+    z-index: 0;
+    transition: 0.5s all;
+}

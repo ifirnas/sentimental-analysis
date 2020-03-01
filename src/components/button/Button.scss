@@ -1,0 +1,18 @@
+.Button {
+    padding: 0px 30px 30px;
+    text-align: right;
+    button {
+        cursor: pointer;
+        padding: 13px 20px;
+        -webkit-appearance: none;
+        border: 0;
+        background: #313131;
+        color: white;
+        border-radius: 5px;
+        font-size: 18px;
+        text-transform: uppercase;
+        &[disabled] {
+            background: #999999;
+        }
+    }    
+}
