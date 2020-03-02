@@ -12,7 +12,7 @@ class Smiley extends Component<SmileyProps> {
     render() {
         return ( 
             <div className={`smiley ${this.props.applyClass}`} onClick={this.props.onPress}>
-                <div className="smiley-icon">
+                <div className="smiley-icon rotating">
                     <FaSmile />
                 </div>
                 <div className="smiley-text fadeInRight">

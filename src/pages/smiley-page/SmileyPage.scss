@@ -6,6 +6,8 @@
 .showContents {
     top: 0px;
     opacity: 1;
+    transition: 1s all;
+    width: auto;
 }
 
 .showMore {
@@ -18,17 +20,19 @@
 .showModule {
     opacity: 1 !important;
     height: auto !important;    
-    transition: 2s height !important;
+    width: auto !important;
+    transition: 1s all !important;
 
     .ratings {
         h4, .numbers, .hint {
             @extend .showContents;
+            white-space: nowrap;
         }        
         .h4 {
-            transition: 1s all;
+            transition: 2s all;
         }
         .numbers, .hint {
-            transition: 1.2s all;
+            transition: 2.2s all;
         }
     }
 }
