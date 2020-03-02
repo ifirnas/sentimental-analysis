@@ -10,12 +10,19 @@ export interface RatingProps {
     onClose: () => void;
 }
 
-class Rating extends Component<RatingProps> {
+export interface RatingState {
+    isRated: boolean;
+    showMore: boolean;
+    initClass: string;
+    isSubmitted: boolean;
+}
+
+class Rating extends Component<RatingProps, RatingState> {
 
     state = {
         isRated: false,
         showMore: false,
-        initClass: 'initTellMore',
+        initClass: 'init-tell-more',
         isSubmitted: false
     }
 
@@ -50,7 +57,7 @@ class Rating extends Component<RatingProps> {
         this.setState({
             isRated: false,
             showMore: false,
-            initClass: 'initTellMore',
+            initClass: 'init-tell-more',
             isSubmitted: false
         })
         this.props.onClose();
@@ -66,7 +73,7 @@ class Rating extends Component<RatingProps> {
                         !isSubmitted ? 
                             <TellMore onSubmitted={this.handleSubmit} applyClass={this.state.initClass} /> 
                         : 
-                            <div className="initTellMore animateOut">
+                            <div className="init-tell-more animateOut">
                                 <h4>Thank you!</h4>
                                 <p>Your feedback is valuable to us.</p>
                             </div>

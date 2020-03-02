@@ -19,7 +19,7 @@ class Card extends Component<CardProps> {
                         {this.props.title}
                     </div> : ''
                 }                
-                <div onClick={this.props.onClose} className={this.props.title ? 'close-icon icon-light' : 'close-icon icon-dark'}>
+                <div onClick={this.props.onClose} className={this.props.title ? 'icon-close icon-light' : 'close-icon icon-dark'}>
                     <MdClose />
                 </div>
                 {this.props.children}

@@ -21,15 +21,14 @@
         
     }
 
-    .close-icon {
-        font-size: 25px;
-        position: absolute;
-        top: 5px;
-        right: 5px;
-        cursor: pointer;
-    }
-
     .icon {
+        &-close {
+            font-size: 25px;
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            cursor: pointer;
+        }
         &-light {
             color: #666666
         }

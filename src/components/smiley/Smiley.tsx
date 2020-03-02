@@ -10,8 +10,11 @@ export interface SmileyProps {
 class Smiley extends Component<SmileyProps> {
 
     render() {
+        
+        const { applyClass, onPress } = this.props;
+
         return ( 
-            <div className={`smiley ${this.props.applyClass}`} onClick={this.props.onPress}>
+            <div className={`smiley ${applyClass}`} onClick={onPress}>
                 <div className="smiley-icon rotating">
                     <FaSmile />
                 </div>
